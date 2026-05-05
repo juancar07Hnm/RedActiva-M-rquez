@@ -39,7 +39,7 @@ body {
     padding: 10px 0;
 }
 
-.azul_resaltado { color: var(--color-azul); }
+.azul_resaltado { color: var(--color-negro) }
 
 .caja-contacto {
     background-color: var(--color-blanco-cristal);
