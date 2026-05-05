@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RedActiva Márquez - Contacto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/contacto.css">
+    <link rel="icon" type="image/svg+xml" href="img/logo.svg">
+</head>
+<body>
+    <header class="mi_header_peque">
+        <nav class="mi_menu mi_contenedor">
+            <div class="logo">
+                <a href="index.html"><img src="img/logo.svg" alt="logo redactiva"></a>
+            </div>
+
+            <nav class="menu_nav">
+                <a href="index.html">Inicio</a>
+                <a href="servicios.html">Servicios</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+
+            <div class="menu_social">
+                <a href="#" target="_blank"><img src="img/instagram.svg" alt="Instagram"></a>
+                <a href="#" target="_blank"><img src="img/whatsapp.svg" alt="WhatsApp"></a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="mi_contenedor">
+        <h2 class="titulo_servicios">¿Necesitas soporte en tu <span class="azul_resaltado">Infraestructura</span>?</h2>
+        <p class="subtitulo_form">Cuéntanos tu caso y un técnico de RedActiva Márquez te atenderá.</p>
+
+        <form id="formulario_contacto" action="" method="GET" class="caja-contacto">
+            
+            <label for="nombre">Nombre y Apellidos:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre o empresa" required autofocus>
+
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+
+            <label for="provincia">Ubicación del Servicio:</label>
+            <select id="provincia" name="provincia">
+                <option value="cordoba" selected>Córdoba</option>
+                <option value="sevilla">Sevilla</option>
+                <option value="malaga">Málaga</option>
+            </select>
+
+            <p class="etiqueta-form">Servicio requerido:</p>
+            <div class="opciones-check">
+                <input type="checkbox" id="check1" name="servicio" value="hardware">
+                <label for="check1" class="label-inline">Hardware/TPV</label>
+                <input type="checkbox" id="check2" name="servicio" value="redes">
+                <label for="check2" class="label-inline">Redes/VLANs</label>
+                <input type="checkbox" id="check3" name="servicio" value="sistemas">
+                <label for="check3" class="label-inline">Servidores/Cloud</label>
+            </div>
+
+            <p class="etiqueta-form">Nivel de urgencia:</p>
+            <div class="opciones-radio">
+                <input type="radio" id="radio1" name="urgencia" value="B">
+                <label for="radio1" class="label-inline">Mantenimiento Normal</label>
+                <input type="radio" id="radio2" name="urgencia" value="A">
+                <label for="radio2" class="label-inline">Urgente (Parada de servicio)</label>
+            </div>
+
+            <div class="botones">
+                <button type="submit" class="cta">SOLICITAR PRESUPUESTO</button>
+                <button type="reset" class="btn-borrar">LIMPIAR DATOS</button>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <div class="footer_social">
+            <img src="img/instagram.svg" alt="Instagram">
+            <img src="img/whatsapp.svg" alt="WhatsApp">
+        </div>
+        <p>&copy; 2026 Juan Carlos Márquez Gómez - RedActiva Márquez</p>
+    </footer>
+
+    <script src="js/validacion.js"></script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+:root {
+    --color-primario: #3498db; /* Azul corporativo */
+    --fondo: #0f172a;          
+    --gris-texto: #e2e8f0;    
+    --color-borde: rgba(255, 255, 255, 0.1); 
+    --blanco: #ffffff;         
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: var(--fondo);
+    color: var(--gris-texto);
+    line-height: 1.6;
+}
+
+.mi_contenedor {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.mi_header {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%); /* Ajustado para un estilo más limpio */
+}
+
+.fondo_trabajo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(0.3);
+}
+
+.mi_menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    border-bottom: 1px solid var(--color-borde);
+}
+
+.logo img { max-width: 60px; }
+
+.menu_nav a {
+    text-decoration: none;
+    color: var(--blanco);
+    padding: 10px 20px;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.menu_nav a:hover { color: var(--color-primario); }
+
+.header_container {
+    height: calc(100vh - 80px); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header_titulo {
+    font-family: 'Audiowide', cursive;
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+}
+
+.info { color: var(--color-primario); }
+
+.servicios {
+    display: inline-block;
+    padding: 12px 35px;
+    margin-top: 40px;
+    border: 2px solid var(--color-primario); 
+    color: var(--color-primario);
+    text-decoration: none;
+    border-radius: 5px; /* Estilo más cuadrado y profesional */
+    transition: 0.4s;
+    width: fit-content;
+}
+
+.servicios:hover {
+    background: var(--color-primario);
+    color: white;
+}
+
+.seccion_intro { padding: 50px 0; }
+
+.linea_azul {
+    border: none;
+    height: 4px;
+    width: 60px;
+    background-color: var(--color-primario);
+    margin-bottom: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    background-color: #0b1120;
+    border-top: 1px solid var(--color-borde);
+}

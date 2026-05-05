@@ -1,0 +1,159 @@
+/* --- VARIABLES Y ESTILOS GENERALES --- */
+:root {
+    --color-azul: #3498db; 
+    --color-negro: #0f172a;      
+    --color-negro-capa: rgba(15, 23, 42, 0.85); 
+    --gris-claro: #e2e8f0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1a252f;
+    color: white;
+    line-height: 1.6;
+}
+
+.mi_contenedor {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- CABECERA Y NAVEGACIÓN (IGUAL A CONTACTO) --- */
+.mi_header_peque { 
+    background-color: var(--color-negro); 
+    padding: 10px 0; 
+}
+
+.mi_menu {
+    display: flex;
+    justify-content: space-between; /* Distribuye Logo | Menú | Redes */
+    align-items: center;
+    height: 80px;
+}
+
+.menu_nav {
+    display: flex; 
+    gap: 25px; 
+    background-color: var(--color-azul); 
+    padding: 10px 25px;
+    border-radius: 8px;
+}
+
+.menu_nav a {
+    text-decoration: none;
+    color: white; 
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.menu_nav a:hover {
+    color: var(--color-negro);
+}
+
+.menu_social {
+    display: flex;
+    gap: 15px;
+}
+
+.menu_social img {
+    width: 22px;
+    height: 22px;
+}
+
+.logo img {
+    max-width: 60px;
+    display: block;
+}
+
+/* --- TÍTULO DE LA SECCIÓN --- */
+.titulo_servicios {
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Audiowide', cursive;
+    font-size: 2.2rem;
+    color: var(--color-azul);
+}
+
+/* --- GRID DE SERVICIOS --- */
+.grid_servicios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin: 50px 0;
+}
+
+.caja_servicio {
+    height: 380px;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    transition: 0.3s ease-in-out;
+    display: flex;
+}
+
+.foto-fondo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* --- AJUSTE DEL TEXTO DENTRO DE LAS TARJETAS --- */
+.capa-oscura {
+    position: relative;
+    z-index: 2;
+    background-color: var(--color-negro-capa);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px; /* Espacio para que el texto no toque los bordes */
+    text-align: center;
+    border: 1px solid rgba(52, 152, 219, 0.2);
+}
+
+.capa-oscura h3 { 
+    color: var(--color-azul); 
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    font-family: 'Audiowide', cursive;
+}
+
+.capa-oscura p {
+    font-size: 0.95rem;
+    color: var(--gris-claro);
+    max-width: 280px; /* Evita que el texto se estire demasiado a lo ancho */
+    margin: 0 auto;
+}
+
+.caja_servicio:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 25px rgba(52, 152, 219, 0.4);
+}
+
+/* --- RESPONSIVE (MÓVILES) --- */
+@media (max-width: 900px) {
+    .grid_servicios { grid-template-columns: 1fr; }
+    .mi_menu { flex-direction: column; height: auto; gap: 20px; padding: 20px 0; }
+}
+
+/* --- FOOTER --- */
+footer {
+    text-align: center;
+    padding: 40px;
+    background-color: var(--color-negro);
+    border-top: 1px solid rgba(255,255,255,0.1);
+    color: var(--color-azul);
+    margin-top: 50px;
+}
