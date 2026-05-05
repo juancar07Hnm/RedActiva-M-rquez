@@ -1,14 +1,15 @@
+/* --- COLORES PARA EL FORMULARIO --- */
 :root {
     --color-azul: #3498db;   
     --color-negro: #0f172a;      
-    --color-blanco-cristal: rgba(255, 255, 255, 0.9); 
+    --color-blanco-cristal: rgba(255, 255, 255, 0.9); /* Blanco un poco transparente */
     --color-borde-suave: rgba(52, 152, 219, 0.2);           
     --color-gris-borde: #cbd5e1;     
 }
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: var(--color-azul); /* Fondo azul para destacar el formulario blanco */
+    background-color: var(--color-azul); /* Fondo azul para el contacto */
 }
 
 .mi_menu {
@@ -41,6 +42,7 @@ body {
 
 .azul_resaltado { color: var(--color-negro) }
 
+/* La caja blanca del formulario con sombrita para que flote */
 .caja-contacto {
     background-color: var(--color-blanco-cristal);
     padding: 40px;
@@ -57,6 +59,7 @@ body {
     color: var(--color-negro);
 }
 
+/* Estilos para los cuadros donde escribes */
 .caja-contacto input[type="text"],
 .caja-contacto input[type="email"],
 .caja-contacto select {
@@ -69,16 +72,18 @@ body {
 
 .etiqueta-form { margin-top: 20px; font-weight: bold; color: var(--color-negro); }
 
+/* Para que los radios y checks salgan al lado del texto */
 .label-inline {
     display: inline !important;
     font-weight: normal !important;
-    margin-left: 5px;D
+    margin-left: 5px;
     margin-right: 15px;
     color: var(--color-negro);
 }
 
 .botones { margin-top: 30px; display: flex; gap: 10px; justify-content: center; }
 
+/* El botón azul de enviar */
 .cta {
     background-color: var(--color-azul);
     color: white;
@@ -89,6 +94,7 @@ body {
     font-weight: bold;
 }
 
+/* Botón de borrar con un gris suave */
 .btn-borrar {
     background-color: #f1f5f9;
     color: #64748b;
